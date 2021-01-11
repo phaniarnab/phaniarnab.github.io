@@ -11,9 +11,9 @@ title                    : "Arnab Phani"
 title_separator          : "-"
 name                     : &name "Arnab Phani"
 description              : &description "PhD Student at TU Graz"
-url                      : https://arnabp.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://phaniarnab.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "arnabp.github.io"
+repository               : "phaniarnab.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -87,7 +87,7 @@ author:
   employer         :
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=F0SqEY8AAAAJ&hl=en"
-  email            :
+  email            : "phaniarnab@gmail.com"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
