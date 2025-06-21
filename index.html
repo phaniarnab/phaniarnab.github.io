@@ -15,6 +15,11 @@
     <meta content="TU Berlin | TU Berlin" itemprop="name">
     <meta itemprop="description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<style>
+	  html {
+		scroll-behavior: smooth;
+	  }
+	</style>
 </head>
 
 <body>
@@ -44,30 +49,13 @@
                                         <div class="icon"></div>
                                         <div class="text">About</div>
                                     </a></li>
-                                    <li><a href="#pubs" class="">
-                                        <div class="icon"></div>
-                                        <div class="text">Publications</div>
-                                    </a></li>
-									<li><a href="#awards" class="">
-                                        <div class="icon"></div>
-                                        <div class="text">Awards</div>
-                                    </a></li>
-									<li><a href="#talks" class="">
-                                        <div class="icon"></div>
-                                        <div class="text">Talks</div>
-                                    </a></li>
-                                    <li><a href="#teaching" class="">
-                                        <div class="icon"></div>
-                                        <div class="text">Teaching</div>
-                                    </a></li>
-									<li><a href="#service" class="">
-                                        <div class="icon"></div>
-                                        <div class="text">Service</div>
-                                    </a></li>
-                                    <li><a href="#contact" class="">
-                                        <div class="icon"></div>
-                                        <div class="text">Contact</div>
-                                    </a></li>
+                                    <li><a href="#about"><div class="icon"></div><div class="text">About</div></a></li>
+									<li><a href="#publications"><div class="icon"></div><div class="text">Publications</div></a></li>
+									<li><a href="#awards"><div class="icon"></div><div class="text">Awards</div></a></li>
+									<li><a href="#talks"><div class="icon"></div><div class="text">Talks</div></a></li>
+									<li><a href="#teaching"><div class="icon"></div><div class="text">Teaching</div></a></li>
+									<li><a href="#service"><div class="icon"></div><div class="text">Service</div></a></li>
+									<li><a href="#contact"><div class="icon"></div><div class="text">Contact</div></a></li>
                                 </span>
                             </ul>
                         </div>
@@ -135,7 +123,7 @@
     <!-- About -->
     <ul class="slides">
         <li class="slide selected">
-            <a class="section-anchor" data-scroll-name="#"></a>
+            <a id="about" class="section-anchor" data-scroll-name="#about"></a>
             <a class="section-name-anchor" data-section-name="About"></a>
 
             <div class="widecontainer">
@@ -202,22 +190,32 @@
 
 
         <!-- Publications-->
-        <div w3-include-html="publications.html"></div>
+        <li class="slide" id="publications" data-scroll-name="#publications">
+			<div w3-include-html="publications.html"></div>
+		</li>
 		
 		<!-- Awards-->
-        <div w3-include-html="awards.html"></div>
+		<li class="slide" id="awards" data-scroll-name="#awards">
+			<div w3-include-html="awards.html"></div>
+		</li>
 		
 		<!-- Talks-->
-        <div w3-include-html="talks.html"></div>
+		<li class="slide" id="talks" data-scroll-name="#talks">
+			<div w3-include-html="talks.html"></div>
+		</li>
 
         <!-- Teaching-->
-        <div w3-include-html="teaching.html"></div>
+		<li class="slide" id="teaching" data-scroll-name="#teaching">
+			<div w3-include-html="teaching.html"></div>
+		</li>
 		
 		<!-- Service-->
-        <div w3-include-html="service.html"></div>
+		<li class="slide" id="service" data-scroll-name="#service">
+			<div w3-include-html="service.html"></div>
+		</li>
 
         <!-- Contact Information-->
-        <li class="slide">
+        <li class="slide" id="contact">
 			<a class="section-anchor" data-scroll-name="#contact"></a>
 			<a class="section-name-anchor" data-section-name="Contact"></a>
 
