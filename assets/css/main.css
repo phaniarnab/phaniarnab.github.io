@@ -286,7 +286,7 @@ h1,h2,h3,h4,h5,h6{font-family:"Terminal Dosis",arial,sans-serif;font-weight:900;
 .h4,h4{margin-bottom:5px;font-size:19px}
 .h5,h5{margin-bottom:4px;font-size:17px}
 .h6,h6{margin-bottom:4px;font-size:15px}
-body,html{height:100%;background:#fff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#808080}
+body,html{height:100%;background:#fff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#555555}
 .headercontainer{width:100%;margin:0 auto;position:fixed;height:100%;z-index:1;pointer-events:none}
 .headercontainer .container{text-shadow:0 1px 0 #ffffff;z-index:1;height:100%;zoom:1}
 .headercontainer .container hr{height:0px;border:none;border-bottom:1px rgba(255,255,255,0.7) solid;border-top:1px solid rgba(0,0,0,0.15)}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLMMI - Machine Learning Model Management and Inference (SS 2026)</title>
+
+    <link href="../assets/css/page.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="../assets/css/main.css" media="screen" rel="stylesheet" type="text/css">
+    <style>
+        /* The site’s base theme uses gray text; course pages look better with black body text. */
+        body { color: #2c3e50; }
+        h1, h2, h3, h4, h5, h6 { color: #444444; }
+        .widecontainer .container h3 { color: #2c3e50 !important; }
+        /* Override the theme’s Terminal Dosis headings with a more common web-safe font. */
+        body, .text-component, .content, h1, h2, h3, h4, h5, h6 {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        }
+        h1, h2, h3, h4, h5, h6 { font-weight: 700; }
+
+        /* Adds vertical space between bullet points */
+        ul li {
+            margin-bottom: 6px;
+        }
+        /* Note banner styling (simple, readable, and not gray). */
+        .course-note {
+            background: #f2f2f2;
+            border-left: 4px solid #02a2c4;
+            padding: 10px 12px;
+            margin: 12px 0;
+            color: #444444;
+        }
+        .course-note-title { font-weight: 700; margin-bottom: 6px; }
+    </style>
+</head>
+<body>
+    <li class="slide">
+        <div class="widecontainer">
+            <div class="container">
+                <div class="eleven columns offset-two">
+                    <div class="short-title">
+                        <h1 class="white-back">
+                            <div data-component="text" data-name="text1" data-text-type="heading" class="text-component">
+                                <div class="content">
+                                    <div>MLMMI - Machine Learning Model Management and Inference (SS 2026)</div>
+                                </div>
+                            </div>
+                        </h1>
+                    </div>
+
+                    <div class="stripes"></div>
+
+                    <div class="short" align="justify">
+                        <div class="p">
+                            <div data-component="text" data-name="text3" data-text-type="body" class="text-component">
+                                <div class="content">
+                                    <div>
+                                        This advanced course explores the system and data management challenges in
+                                        managing and serving machine learning (ML) models. The lifecycle of an ML model
+                                        extends far beyond training.
+                                    </div>
+                                    <div>&nbsp;</div>
+
+                                    <div>
+                                        The course begins with recapping standard ML pipelines up to the training stage and
+                                        then shifts focus to the post-training workloads. Students will be introduced to
+                                        foundational frameworks for model management, where trained models are treated as
+                                        core data artifacts. Topics include data management techniques and optimizations such
+                                        as model selection, versioning, lineage tracking, metadata management, and model
+                                        monitoring.
+                                    </div>
+                                    <div>&nbsp;</div>
+
+                                    <div>
+                                        Building on these foundations, students will explore the architectures of modern model
+                                        serving systems for both classical models and large language models (LLMs), along with
+                                        performance optimizations such as dynamic batching, model compilation, and resource-efficient
+                                        inference execution. Finally, the course discusses ML agents as an emerging workload.
+                                    </div>
+                                    <div>&nbsp;</div>
+
+                                    <div>
+                                        Throughout the course, students will engage with state-of-the-art research on inference
+                                        and model management. Through a combination of seminal research papers and hands-on projects,
+                                        students will gain a comprehensive understanding of the entire ML lifecycle beyond training,
+                                        preparing them for both academic research and real-world system design.
+                                    </div>
+                                    <div>&nbsp;</div>
+
+                                    <ul>
+                                        <li><b>Where</b>: E-N 189 (lectures) and MAR 0.001 (exercises)</li>
+                                        <li>
+                                            <b>When</b>: Wednesday, 16:15 - 17:45 (lectures) and Monday, 16:15 (exercises).<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First lecture: April 15, 16:15
+                                        </li>
+                                    </ul>
+                                    <div>&nbsp;</div>
+
+                                    <div class="course-note">
+                                        <div class="course-note-title"><b>Note</b></div>
+                                        <div>
+                                            The outline below is tentative. It will evolve as we teach.
+                                        </div>
+                                    </div>
+                                    <div>&nbsp;</div>
+
+                                    <h3>Lecture 1: Intro and Logistics [April 15]</h3>
+                                    <ul>
+                                        <li>Recap of ML pipeline stages</li>
+                                        <li><a href="https://arxiv.org/pdf/2603.03589">Stratum</a> system overview</li>
+                                    </ul>
+                                    <div>&nbsp;</div>
+
+                                    <h2><b>Part 1: ML Deployment</b></h2>
+                                    <div>&nbsp;</div>
+
+                                    <h3>Lecture 2: ML Platforms and Deployment [April 22]</h3>
+                                    <ul>
+                                        <li>MLOps</li>
+                                        <li>Readings: TFX</li>
+                                    </ul>
+                                    <div>&nbsp;</div>
+
+                                    <h3>Lecture 3: Model Selection Systems</h3>
+                                    <ul>
+                                        <li>Model selection systems</li>
+                                        <li>Transfer learning</li>
+                                        <li>Readings: Ease.ml, Cerebro</li>
+                                    </ul>
+                                    <div>&nbsp;</div>
+
+                                    <h3>Lecture 4: Model Registry and Versioning</h3>
+                                    <ul>
+                                        <li>Model versioning</li>
+                                        <li>Feature stores</li>
+                                        <li>Readings: ModelDB, MLFlow</li>
+                                    </ul>
+                                    <div>&nbsp;</div>
+
+                                    <h2><b>Part 2: ML Serving</b></h2>
+                                    <div>&nbsp;</div>
+
+                                    <h3>Lecture 5: ML Serving Systems</h3>
+                                    <ul>
+                                        <li>Traditional model serving</li>
+                                        <li>In-database serving</li>
+                                        <li>Readings: Clipper</li>
+                                    </ul>
+                                    <div>&nbsp;</div>
+
+                                    <h3>Lecture 6: LLM Serving</h3>
+                                    <div>&nbsp;</div>
+
+                                    <h3>Lecture 7: LLM Serving Optimizations</h3>
+                                    <div>&nbsp;</div>
+
+                                    <h3>Lecture 8: Model Monitoring and MLE Agents</h3>
+                                    <div>&nbsp;</div>
+
+                                    <h2>Programming Assignments</h2>
+                                    <div>TBD</div>
+                                    <div>&nbsp;</div>
+
+                                    <h2>Projects</h2>
+                                    <div>
+                                        The majority of the course grade will come from a group project. The projects are designed
+                                        to be challenging and research-oriented and will be implemented in Stratum, a system
+                                        infrastructure for large-scale agent-centric ML workloads. Specific project topics will be
+                                        announced in the coming weeks.
+                                    </div>
+                                    <div>&nbsp;</div>
+
+                                    <div>
+                                        Paper: <a href="https://arxiv.org/pdf/2603.03589">https://arxiv.org/pdf/2603.03589</a><br>
+                                        Code: <a href="https://github.com/deem-data/stratum">https://github.com/deem-data/stratum</a>
+                                    </div>
+                                    <div>&nbsp;</div>
+
+                                    <h2>Organization</h2>
+                                    <ul>
+                                        <li>Lecture: Dr.-Ing. Arnab Phani</li>
+                                        <li>Teaching Assistant: Ellias Strauss</li>
+                                    </ul>
+                                    <div>&nbsp;</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</body>
+</html>
+
