@@ -19,7 +19,7 @@
         h1, h2, h3, h4, h5, h6 { font-weight: 700; }
 
         /* Adds vertical space between bullet points */
-        ul li {
+        ul li, ol li {
             margin-bottom: 6px;
         }
         /* Note banner styling (simple, readable, and not gray). */
@@ -31,6 +31,18 @@
             color: #444444;
         }
         .course-note-title { font-weight: 700; margin-bottom: 6px; }
+        /* page.css resets ol,ul { list-style: none }; restore decimals for assignments */
+        ol.assignments-list {
+            list-style: decimal;
+            list-style-position: outside;
+            padding-left: 1.5em;
+            margin-left: 0;
+        }
+        hr.course-section-rule {
+            border: 0;
+            border-top: 1px solid #c5cdd4;
+            margin: 1.35em 0 0.85em;
+        }
     </style>
 </head>
 <body>
@@ -90,7 +102,7 @@
                                     <ul>
                                         <li><b>Where</b>: E-N 189 (lectures) and MAR 0.001 (exercises)</li>
                                         <li>
-                                            <b>When</b>: Wednesday, 16:15 - 17:45 (lectures) and Monday, 16:15 (exercises).<br>
+                                            <b>When</b>: Wednesday, 16:15 - 17:45 (lectures) and Monday, 16:15 (consultation with TA).<br>
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;First lecture: April 15, 16:15
                                         </li>
                                     </ul>
@@ -104,24 +116,35 @@
                                     </div>
                                     <div>&nbsp;</div>
 
+                                    <hr class="course-section-rule">
                                     <h3>Lecture 1: Intro and Logistics [April 15]</h3>
                                     <ul>
                                         <li>Recap of ML pipeline stages</li>
                                         <li><a href="https://arxiv.org/pdf/2603.03589">Stratum</a> system overview</li>
+                                        <li><a href="L1_Introduction.pdf">Slides</a> </li>
                                     </ul>
                                     <div>&nbsp;</div>
 
                                     <h2><b>Part 1: ML Deployment</b></h2>
                                     <div>&nbsp;</div>
 
-                                    <h3>Lecture 2: ML Platforms and Deployment [April 22]</h3>
+                                    <h3>Lecture 2: Model Management Systems [April 22]</h3>
+                                    <ul>
+                                        <li>Model and data versioning</li>
+                                        <li>Lineage tracing</li>
+                                        <li>Feature stores</li>
+                                        <li>Readings: ModelDB, MLFlow</li>
+                                    </ul>
+                                    <div>&nbsp;</div>
+
+                                    <h3>Lecture 3: ML Platforms and Deployment [April 29]</h3>
                                     <ul>
                                         <li>MLOps</li>
                                         <li>Readings: TFX</li>
                                     </ul>
                                     <div>&nbsp;</div>
 
-                                    <h3>Lecture 3: Model Selection Systems</h3>
+                                    <h3>Lecture 4: Model Selection Systems [May 06]</h3>
                                     <ul>
                                         <li>Model selection systems</li>
                                         <li>Transfer learning</li>
@@ -129,13 +152,7 @@
                                     </ul>
                                     <div>&nbsp;</div>
 
-                                    <h3>Lecture 4: Model Registry and Versioning</h3>
-                                    <ul>
-                                        <li>Model versioning</li>
-                                        <li>Feature stores</li>
-                                        <li>Readings: ModelDB, MLFlow</li>
-                                    </ul>
-                                    <div>&nbsp;</div>
+
 
                                     <h2><b>Part 2: ML Serving</b></h2>
                                     <div>&nbsp;</div>
@@ -157,10 +174,15 @@
                                     <h3>Lecture 8: Model Monitoring and MLE Agents</h3>
                                     <div>&nbsp;</div>
 
+                                    <hr class="course-section-rule">
                                     <h2>Programming Assignments</h2>
-                                    <div>TBD</div>
-                                    <div>&nbsp;</div>
+                                    <ol class="assignments-list">
+                                        <li>Lightweight Model Management System (<a href="https://github.com/deem-teaching/MLMMI/blob/main/SS26/1_Model_management/task_description.md">task description</a> | deadline: 04.05.2026)</li>
+                                        <li>Transfer Learning (task description | deadline: 18.05.2026)</li>
+                                        <li>Model Serving System (task description | deadline: 01.06.2026)</li>
+                                    </ol>
 
+                                    <hr class="course-section-rule">
                                     <h2>Projects</h2>
                                     <div>
                                         The majority of the course grade will come from a group project. The projects are designed
@@ -176,6 +198,7 @@
                                     </div>
                                     <div>&nbsp;</div>
 
+                                    <hr class="course-section-rule">
                                     <h2>Organization</h2>
                                     <ul>
                                         <li>Lecture: Dr.-Ing. Arnab Phani</li>
