@@ -363,3 +363,182 @@ body,html{height:100%;background:#fff;font-family:'Helvetica Neue',Helvetica,Ari
     .widecontainer .container .contact-form .input textarea,.widecontainer .container .email-form .input textarea{width:280px}
     .widecontainer .container .contact-form .input label,.widecontainer .container .email-form .input label,.widecontainer .container .contact-form .input input,.widecontainer .container .email-form .input input,.widecontainer .container .contact-form .input textarea,.widecontainer .container .email-form .input textarea{float:none;display:block}
     .widecontainer .container .contact-form .input .submit-button,.widecontainer .container .email-form .input .submit-button{margin-left:0}}
+
+/* Theme controls and dark theme for the main profile page. */
+#theme-toggle {
+    width: 60px;
+    height: 34px;
+    padding: 0;
+    border: 1px solid #d0d2d5;
+    border-radius: 999px;
+    background: #f5f6f7;
+    color: #555;
+    cursor: pointer;
+    font: 22px/1 Arial, sans-serif;
+    overflow: hidden;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-control {
+    position: fixed;
+    top: 18px;
+    right: 24px;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    color: #555;
+    font: 16px "Terminal Dosis", Arial, sans-serif;
+}
+
+#theme-toggle:hover,
+#theme-toggle:focus {
+    border-color: #02a2c4;
+    color: #02a2c4;
+    outline: none;
+}
+
+.theme-toggle-track {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.theme-toggle-thumb {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #111;
+    color: #fff;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle-sun,
+.theme-toggle-moon {
+    position: absolute;
+    line-height: 1;
+}
+
+.theme-toggle-sun {
+    display: none;
+}
+
+.theme-toggle-moon {
+    display: block;
+}
+
+body {
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+body.dark-mode,
+body.dark-mode .widecontainer,
+body.dark-mode .slides {
+    background: #252a31;
+    color: #c9cdd3;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: #e5e7ea;
+}
+
+body.dark-mode .headercontainer .container {
+    text-shadow: none;
+}
+
+body.dark-mode .headercontainer .container .columns .inner {
+    background: #2f353e;
+}
+
+body.dark-mode .headercontainer .container hr {
+    border-bottom-color: rgba(255, 255, 255, 0.16);
+    border-top-color: rgba(0, 0, 0, 0.12);
+}
+
+body.dark-mode .headercontainer .container ul li a {
+    color: #c9cdd3;
+}
+
+body.dark-mode .headercontainer .container ul li a:hover,
+body.dark-mode .headercontainer .container ul li a:active,
+body.dark-mode .headercontainer .container ul li a.active,
+body.dark-mode .headercontainer .container ul li a.selected {
+    color: #5fd5ed;
+}
+
+body.dark-mode .headercontainer .container ul li a .icon {
+    background: #59616d;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .widecontainer .container .stripes {
+    background: #555d68;
+}
+
+body.dark-mode .widecontainer .container hr {
+    background: #555d68;
+}
+
+body.dark-mode .widecontainer .container .text-component a {
+    color: #67c5d5;
+}
+
+body.dark-mode #theme-toggle {
+    border-color: #30353b;
+    background: #30353b;
+}
+
+body.dark-mode .theme-control {
+    color: #c9cdd3;
+}
+
+body.dark-mode .theme-toggle-thumb {
+    right: auto;
+    left: 2px;
+    background: #f5f6f7;
+    color: #111;
+}
+
+body.dark-mode .theme-toggle-sun {
+    display: block;
+}
+
+body.dark-mode .theme-toggle-moon {
+    display: none;
+}
+
+/* Light surfaces keep dark logo artwork readable without changing the assets. */
+body.dark-mode img[alt="TU Berlin"],
+body.dark-mode img[alt="BIFOLD"],
+body.dark-mode img[alt="TU Graz"],
+body.dark-mode img[alt="Teradata Labs"],
+body.dark-mode #contact img {
+    box-sizing: content-box;
+    padding: 4px;
+    border-radius: 4px;
+    background: #f5f6f7;
+}
+
+@media only screen and (max-width: 727px) {
+    body.dark-mode .headercontainer {
+        background: #2f353e;
+    }
+
+    .theme-control {
+        top: 12px;
+        right: 14px;
+    }
+}
