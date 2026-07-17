@@ -188,7 +188,7 @@
                                     <div>&nbsp;</div>
 
 
-                                    <h3>Lecture 7: LLM Serving</h3>
+                                    <h3>Lecture 7: LLM Serving [June 17]</h3>
                                     <ul>
                                         <li>LLM inference overview</li>
                                         <li>Iteration-level scheduling</li>
@@ -199,7 +199,7 @@
                                     </ul>
                                     <div>&nbsp;</div>
 
-                                    <h3>Lecture 8: KV Cache Management</h3>
+                                    <h3>Lecture 8: KV Cache Management [June 24]</h3>
                                     <ul>
                                         <li>KV cache memory management</li>
                                         <li>Prompt caching</li>
@@ -214,24 +214,120 @@
                                     <h2>Programming Assignments</h2>
                                     <ol class="assignments-list">
                                         <li>Lightweight Model Management System (<a href="https://github.com/deem-teaching/MLMMI/blob/main/SS26/1_Model_management/task_description.md">task description</a> | deadline: 04.05.2026)</li>
-                                        <li>Transfer Learning (task description | deadline: 18.05.2026)</li>
-                                        <li>Model Serving System (task description | deadline: 01.06.2026)</li>
+                                        <li>Transfer Learning (<a href="https://github.com/deem-teaching/MLMMI/blob/main/SS26/2_Transfer_learning/task_description.md">task description</a> | deadline: 18.05.2026)</li>
+                                        <li>Model Serving System (<a href="https://github.com/deem-teaching/MLMMI/blob/main/SS26/3_Model_serving_system/task_description.md">task description</a> | deadline: 01.06.2026)</li>
                                     </ol>
 
                                     <hr class="course-section-rule">
                                     <h2>Projects</h2>
                                     <div>
-                                        The majority of the course grade will come from a group project. The projects are designed
-                                        to be challenging and research-oriented and will be implemented in Stratum, a system
-                                        infrastructure for large-scale agent-centric ML workloads. Specific project topics will be
-                                        announced in the coming weeks.
+                                        The majority of the course grade will come from a group project. There are five project
+                                        topics.
                                     </div>
+                                    <div>&nbsp;</div>
+
+                                    <ul>
+                                        <li>
+                                            <b>Projects #1 and #2</b> focus on the application side of the system and involve
+                                            building LLM-assisted frameworks. These projects give exposure to modern ML
+                                            engineering agents and automated pipeline generation techniques.
+                                        </li>
+                                        <li>
+                                            <b>Projects #3 and #4</b> focus on the internals of
+                                            <a href="https://arxiv.org/pdf/2603.03589">Stratum</a>, including optimizer
+                                            rewrites and high-performance Rust operator implementations. These projects expose
+                                            core concepts in data systems, query optimization, and runtime.
+                                        </li>
+                                        <li>
+                                            <b>Project #5</b>, which may be assigned to two independent groups, involves
+                                            building an AutoML framework on top of skrub and stratum. This project requires
+                                            exploring optimization and search techniques such as successive halving.
+                                        </li>
+                                    </ul>
                                     <div>&nbsp;</div>
 
                                     <div>
                                         Paper: <a href="https://arxiv.org/pdf/2603.03589">https://arxiv.org/pdf/2603.03589</a><br>
                                         Code: <a href="https://github.com/deem-data/stratum">https://github.com/deem-data/stratum</a>
                                     </div>
+                                    <div>&nbsp;</div>
+
+                                    <div class="course-note">
+                                        <div class="course-note-title"><b>Note</b></div>
+                                        <div>
+                                            Project overviews are shared below so you can start thinking about preferences and
+                                            possible directions. All projects will be discussed in greater detail during the
+                                            lecture on May 20.
+                                        </div>
+                                    </div>
+                                    <div>&nbsp;</div>
+
+                                    <ol class="assignments-list">
+                                        <li>
+                                            <b>Skrubifier: LLM-Assisted Conversion of ML Pipelines to Skrub DataOps</b><br>
+                                            Build an LLM-assisted framework that automatically converts tabular machine learning
+                                            pipelines written using popular Python ML libraries into the Skrub DataOps API. Your
+                                            framework should analyze existing pipelines and generate runnable Skrub DataOps DAGs
+                                            compatible with skrub or stratum. Use tabular ML pipelines from
+                                            <a href="https://github.com/openai/mle-bench/tree/main">MLE-Bench</a> and
+                                            <a href="https://www.kaggle.com/code/sudalairajkumar/winning-solutions-of-kaggle-competitions">Kaggle</a>
+                                            as source workloads. Select representative solutions, convert them using your
+                                            framework, and evaluate correctness and executability.<br>
+                                            <b>Main deliverables:</b> A robust conversion framework/toolchain; 10 converted
+                                            pipelines written using the Skrub DataOps API.
+                                        </li>
+                                        <li>
+                                            <b>AIDE-skrub: Extending AIDE Agent for Skrub DataOps Generation</b><br>
+                                            Extend the AIDE agent framework to generate pipelines directly in the Skrub DataOps
+                                            API. Explore methods including modifying existing prompts in AIDE and few-shot
+                                            demonstrations, tool augmentation, and adding new modules/sub-agents in AIDE. Use
+                                            tabular datasets and tasks from
+                                            <a href="https://github.com/openai/mle-bench/tree/main">MLE-Bench</a> and
+                                            <a href="https://www.kaggle.com/code/sudalairajkumar/winning-solutions-of-kaggle-competitions">Kaggle</a>
+                                            to evaluate your system.<br>
+                                            <b>Main deliverables:</b> A modified version of AIDE capable of producing Skrub
+                                            DataOps code; 10 generated pipelines runnable on skrub or stratum.
+                                        </li>
+                                        <li>
+                                            <b>Stratum Optimizer: Rule-Based Rewrites for stratum</b><br>
+                                            Extend stratum with a collection of rule-based optimization rewrites. Each group
+                                            member must implement five rewrites, where each rewrite consists of a pattern
+                                            matcher, a rewrite rule, and unit tests validating correctness. Example rewrites
+                                            include algebraic rewrites, constant folding, projection fusion, and pushdown.<br>
+                                            <b>Main deliverables:</b> Rewrite implementations integrated into stratum; unit
+                                            tests for every rewrite.
+                                        </li>
+                                        <li>
+                                            <b>High-Performance Rust Kernels for Stratum</b><br>
+                                            Implement high-performance Rust kernels for operators used in stratum. Each group
+                                            member must contribute two kernels. Select a baseline implementation from systems
+                                            such as Scikit-learn and implement optimized Rust versions targeting a
+                                            constrained/default hyperparameter configuration. The goal is to achieve at least
+                                            2× speedup over the baseline. Potential optimization techniques include
+                                            SIMD/vectorization, parallelization, cache-aware execution, and zero-copy
+                                            processing. Example operators include processing methods (normalization, encoding,
+                                            scaling), learning algorithms (logistic regression, SGD classifier, Naive Bayes),
+                                            and feature transformation operators.<br>
+                                            <b>Main deliverables:</b> Rust implementations integrated with stratum; unit tests
+                                            validating correctness; benchmark suite comparing performance against baselines.
+                                        </li>
+                                        <li>
+                                            <b>AutoML on Skrub DataOps DAGs</b> (two independent groups)<br>
+                                            Design and implement an AutoML framework on top of the Skrub DataOps API. Given
+                                            (1) a dataset, (2) a problem description, and (3) a YAML specification describing
+                                            candidate preprocessing techniques and models, your system should parse/compile the
+                                            YAML into a Skrub DataOps DAG representing all pipeline combinations, execute and
+                                            evaluate candidate pipelines, iteratively prune poor-performing pipelines using
+                                            techniques such as successive halving, and continue refinement until a single
+                                            best-performing pipeline remains. The framework should support arbitrary tabular ML
+                                            problems from
+                                            <a href="https://www.kaggle.com/code/sudalairajkumar/winning-solutions-of-kaggle-competitions">Kaggle</a>.
+                                            Example configurable components include encoders, imputation methods, scaling
+                                            methods, linear models, tree-based models, and regularization choices.<br>
+                                            <b>Main deliverables:</b> An AutoML framework that generates skrub DataOps DAGs;
+                                            two complete problem solutions per person using the framework.
+                                        </li>
+                                    </ol>
                                     <div>&nbsp;</div>
 
                                     <hr class="course-section-rule">
