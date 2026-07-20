@@ -22,11 +22,11 @@
 	</style>
 </head>
 
-<body>
+<body class="dark-mode">
 <script src="https://code.jquery.com/jquery-1.9.1.js" type="text/javascript"></script>
 <div class="theme-control">
     <span>Theme</span>
-    <button id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode" aria-pressed="false">
+    <button id="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode" aria-pressed="true">
         <span class="theme-toggle-track" aria-hidden="true">
             <span class="theme-toggle-thumb">
                 <span class="theme-toggle-sun">☼</span>
@@ -284,7 +284,7 @@
     }
 
     var savedTheme = window.localStorage.getItem(storageKey);
-    setTheme(savedTheme === 'dark');
+    setTheme(savedTheme !== 'light');
 
     toggle.addEventListener('click', function () {
         var isDark = !body.classList.contains('dark-mode');
